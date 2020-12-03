@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #172938;
+  max-width: 800px;
+  margin: 1em auto;
+  padding: 0 1em;
+
+  font-family: 'Rubik', Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #AAA;
+}
+
+.row, #activity-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#activity-content div {
+  width: 1em;
+  height: 1em;
+  margin: 1em auto;
+}
+
+#activity-label div {
+  text-align: center;
+}
+
+#activity-content div::before {
+  content: " ";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  background: #00000020;
+}
+
+#activity-content div.busy::before {
+  background: #3ea977;
+}
+
+h2 {
+  font-weight: normal;
+  color: #DDD;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section {
+  min-width: 50%;
+  flex-basis: 0;
+  flex-grow: 1;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  section {
+    min-width: unset;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}
+
+section:first-child {
+  padding-right: 2em;
+}
+
+.activity {
+  border: 1px solid #444;
+  border-width: 0 0 1px 0;
+  display: flex;
+}
+
+.date {
+  text-align: center;
+  padding: .3em 1em .3em .5em;
+}
+
+.date h3 {
+  text-transform: uppercase;
+  font-size: .7em;
+}
+
+.date h2 {
+  margin: 0;
+  font-size: 1em;
+  color: #AAA;
+}
+
+.activity .content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: #DDD;
+  font-size: 1.1em;
+}

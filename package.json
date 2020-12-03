@@ -1,0 +1,17 @@
+{
+  "name": "workout",
+  "version": "1.0.0",
+  "description": "Workout App",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-static": "5.0.0"
+  }
+}
